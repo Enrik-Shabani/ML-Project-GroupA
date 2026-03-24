@@ -205,3 +205,19 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Data files (don't push large CSVs)
+data/*.csv
+*.csv
+
+# Colab checkpoints
+.ipynb_checkpoints/
+__pycache__/
+
+# Model files
+*.pkl
+*.joblib
+
+# Large outputs
+*.png
+*.jpg
