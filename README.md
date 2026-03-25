@@ -12,7 +12,7 @@ Can machine learning models predict high air pollution levels and identify patte
 
 **Dataset:**  
 Beijing Multi-Site Air-Quality Data (2013-2017)  
-Source: [UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Beijing+Multi-Site+Air-Quality+Data)
+Source: [UCI ML Repository](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data)
 
 ## 🎯 Objectives
 
