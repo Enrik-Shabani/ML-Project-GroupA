@@ -49,19 +49,6 @@ beijing-air-quality-ml/
 └── .gitignore                     # Ignored files
 ```
 
-## 🚀 Getting Started
-
-### Open in Google Colab
-
-1. Click on any notebook in `notebooks/` folder
-2. Click "Open in Colab" badge
-3. Mount Google Drive and upload data
-4. Run all cells
-
-### Quick Start Badge
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/beijing-air-quality-ml/blob/main/notebooks/01_data_exploration.ipynb)
-
-*Replace `YOUR_USERNAME` with your GitHub username*
 
 ## 📈 Key Results
 
