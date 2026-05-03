@@ -58,7 +58,7 @@ You can download the cleaned dataset here:
 
 After downloading, place the file in:
 
-data/processed/cleaned_data.csv
+data/processed/data_clean_featured.csv
 
 Alternatively, the dataset can be downloaded automatically using the provided notebook.(02_feature_engineering.ipynb)
 
