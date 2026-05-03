@@ -113,7 +113,7 @@ Run `01_Cleaning_and_Features.ipynb` — it downloads the raw files automaticall
 ## Authors
 
 Group A — HEC Lausanne  
-[Enrik Shabani](https://github.com/Enrik-Shabani) · *(add teammates)*
+Enrik Shabani · Daniel Schneggenburger · Faysal Fouzi
 
 ---
 
