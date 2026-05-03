@@ -90,7 +90,7 @@ The processed dataset is not stored in this repository (file size).
 You can either:
 
 **Option A — Download directly**  
-👉 [data_clean_featured.csv (Google Drive)](https://drive.google.com/file/d/1bzj6PRYjdXp9GD9zT2ye54qsrJlczadT/view?usp=drive_link)  
+👉 [data_clean_featured.csv (Google Drive)](https://drive.google.com/file/d/1T9gq-MBUJyZHIW8uMIRPzfCxNslLov3j/view?usp=sharing)  
 Place the file in `data/processed/data_clean_featured.csv`
 
 **Option B — Regenerate it**  
