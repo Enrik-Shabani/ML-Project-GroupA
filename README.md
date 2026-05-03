@@ -32,11 +32,12 @@ Source: [UCI ML Repository](https://archive.ics.uci.edu/dataset/501/beijing+mult
 ## 📁 Project Structure
 
 ```
-beijing-air-quality-ml/
+ML-Project-GroupA/
 │
-├── data/                          # Raw data files (not tracked)
+├── data/
 │   ├── README.md
-│   └── *.csv
+│   ├── raw/                        # Raw dataset files
+│   └── processed/                  # Liink to the cleaned dataset
 │
 ├── notebooks/                     # Jupyter notebooks
 │   ├── 01_data_exploration.ipynb
