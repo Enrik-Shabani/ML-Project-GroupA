@@ -1,80 +1,122 @@
-# ML-Project-GroupA
-ML Project, Group A, HEC Lausanne
+# Beijing Air Quality — ML Project
+**HEC Lausanne · Master in Management, Business Analytics · Spring 2026**  
+Group A
 
-# Beijing Air Quality Machine Learning Project
+---
 
-Predicting PM2.5 pollution levels using machine learning models and identifying urban pollution patterns.
+## Research question
 
-## 📊 Project Overview
+Can machine learning models accurately predict PM2.5 pollution levels in Beijing, and what patterns of pollution can be identified across stations and time periods?
 
-**Research Question:**  
-Can machine learning models predict high air pollution levels and identify patterns of pollution across different locations and time periods?
+---
 
-**Dataset:**  
-Beijing Multi-Site Air-Quality Data (2013-2017)  
+## Dataset
+
+**Beijing Multi-Site Air Quality Data (2013–2017)**  
 Source: [UCI ML Repository](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data)
 
-## 🎯 Objectives
+- 12 monitoring stations across Beijing
+- Hourly measurements over 4 years (~420,000 records)
+- Features: 6 pollutants (PM2.5, PM10, SO2, NO2, CO, O3) + weather variables (temperature, pressure, wind speed, wind direction, rainfall)
 
-1. **Predict** PM2.5 pollution levels using supervised learning
-2. **Identify** key factors influencing air quality
-3. **Discover** pollution patterns across time and locations
-4. **Interpret** model predictions using SHAP values
+---
 
-## 🛠️ Methods
-
-- **Feature Engineering**: Temporal variables, lag features, rolling statistics
-- **Models**: Linear Regression, Random Forest, Gradient Boosting
-- **Validation**: Time-series cross-validation
-- **Interpretability**: SHAP values
-- **Unsupervised Learning**: PCA and K-Means clustering
-
-## 📁 Project Structure
+## Project structure
 
 ```
 ML-Project-GroupA/
 │
 ├── data/
-│   ├── README.md
-│   ├── raw/                        # Raw dataset files
-│   └── processed/                  # Liink to the cleaned dataset
+│   ├── raw/                          # Original CSV files (one per station)
+│   └── processed/                    # Cleaned + featured dataset (see below)
 │
-├── notebooks/                     # Jupyter notebooks
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   ├── 03_modeling.ipynb
-│   └── 04_interpretation.ipynb
+├── notebooks/
+│   ├── 01_Cleaning_and_Features.ipynb   # Data cleaning + feature engineering
+│   ├── 02_EDA.ipynb                     # Exploratory data analysis
+│   ├── 03_Supervised_Learning.ipynb     # Regression models + evaluation
+│   └── 04_Unsupervised_Learning.ipynb   # Clustering + PCA visualisation
 │
-├── requirements.txt               # Python dependencies
-├── README.md                      # This file
-└── .gitignore                     # Ignored files
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
-## 📂 Data
+---
 
-Due to GitHub file size limitations, the processed dataset is not included in this repository.
+## Notebooks overview
 
-You can download the cleaned dataset here:
-👉 [Cleaned Dataset + Featured](https://drive.google.com/file/d/1bzj6PRYjdXp9GD9zT2ye54qsrJlczadT/view?usp=drive_link)
+| # | Notebook | Content |
+|---|---|---|
+| 1 | Cleaning & Features | Missing value imputation, negative value handling, lag features, rolling means, cyclical time encodings, wind direction encoding |
+| 2 | EDA | PM2.5 distribution, seasonal/hourly patterns, station comparisons, correlation analysis |
+| 3 | Supervised Learning | Ridge regression · Random Forest · Gradient Boosting — time-series CV, hyperparameter tuning, permutation importance, PDP plots |
+| 4 | Unsupervised Learning | K-Means clustering on daily station aggregates, elbow + silhouette selection, PCA 2D visualisation, cluster interpretation |
 
-After downloading, place the file in:
+---
 
-data/processed/data_clean_featured.csv
+## Methods
 
-Alternatively, the dataset can be downloaded automatically using the provided notebook.(02_feature_engineering.ipynb)
+**Data cleaning**
+- Linear interpolation (limit = 6h) within each station, station-level median fallback
+- Negative pollutant values flagged as NaN
+- Per-station missing-value analysis and gap-size analysis
 
-## 📈 Key Results
+**Feature engineering**
+- Lag features: PM2.5 at t−1h, t−3h, t−6h
+- Rolling means: 3h, 6h, 24h
+- Cyclical encodings: hour and month (sin/cos)
+- Wind direction: compass string → sin/cos + wind vector components
+- Station one-hot encoding
 
-*(To be updated after analysis)*
+**Supervised learning** (regression task — predicting PM2.5)
+- Ridge regression (linear baseline)
+- Random Forest
+- Gradient Boosting (XGBoost)
+- Data split: chronological (train 2013–2016, test 2017) — no shuffling
+- Tuning: `TimeSeriesSplit` cross-validation
+- Metrics: RMSE, MAE, R²
+- Interpretation: permutation importance, partial dependence plots
 
-- **Best Model**: Gradient Boosting (R² = TBD)
-- **Top Features**: TBD
-- **Pollution Patterns**: TBD
+**Unsupervised learning**
+- K-Means clustering on daily station-level aggregates
+- Number of clusters selected via elbow method + silhouette score
+- PCA (2 components) used for cluster visualisation
 
-## 👤 Author
+---
 
-Your Name - [Your GitHub](https://github.com/YOUR_USERNAME)
+## Data access
 
-## 📄 License
+The processed dataset is not stored in this repository (file size).  
+You can either:
+
+**Option A — Download directly**  
+👉 [data_clean_featured.csv (Google Drive)](https://drive.google.com/file/d/1bzj6PRYjdXp9GD9zT2ye54qsrJlczadT/view?usp=drive_link)  
+Place the file in `data/processed/data_clean_featured.csv`
+
+**Option B — Regenerate it**  
+Run `01_Cleaning_and_Features.ipynb` — it downloads the raw files automatically from this repository and produces the processed file.
+
+---
+
+## Key results
+
+> To be updated after analysis
+
+| Metric | Ridge | Random Forest | Gradient Boosting |
+|---|---|---|---|
+| RMSE | — | — | — |
+| MAE | — | — | — |
+| R² | — | — | — |
+
+---
+
+## Authors
+
+Group A — HEC Lausanne  
+[Enrik Shabani](https://github.com/Enrik-Shabani) · *(add teammates)*
+
+---
+
+## License
 
 MIT License
