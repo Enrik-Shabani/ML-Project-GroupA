@@ -102,7 +102,7 @@ Run `01_Cleaning_and_Features.ipynb` — it downloads the raw files automaticall
 
 > To be updated after analysis
 
-| Metric | Ridge | Random Forest | Gradient Boosting |
+| Metric | Baseline OLS | Ridge | Gradient Boosting |
 |---|---|---|---|
 | RMSE | — | — | — |
 | MAE | — | — | — |
