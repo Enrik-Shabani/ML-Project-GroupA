@@ -100,14 +100,14 @@ Run `01_Cleaning_and_Features.ipynb` — it downloads the raw files automaticall
 
 ## Key results
 
-> To be updated after analysis
 
 | Metric | Baseline OLS | Ridge | Gradient Boosting |
-|---|---|---|---|
-| RMSE | — | — | — |
-| MAE | — | — | — |
-| R² | — | — | — |
+|---|---:|---:|---:|
+| RMSE | 17.41 µg/m³ | 17.41 µg/m³ | **17.04 µg/m³** |
+| MAE | 9.61 µg/m³ | 9.61 µg/m³ | **9.17 µg/m³** |
+| R² | 0.956 | 0.956 | **0.958** |
 
+All metrics are computed on the held-out temporal test set using feature set C. Gradient Boosting achieved the best performance, although the improvement over OLS and Ridge was modest.
 ---
 
 ## Authors
