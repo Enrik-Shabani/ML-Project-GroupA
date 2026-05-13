@@ -109,6 +109,7 @@ if you want to access the cleaned dataset anyway, this is the link :
 | R² | 0.956 | 0.956 | **0.958** |
 
 All metrics are computed on the held-out temporal test set using feature set C. Gradient Boosting achieved the best performance, although the improvement over OLS and Ridge was modest.
+
 ---
 
 ## Authors
