@@ -97,10 +97,6 @@ if you want to access the cleaned dataset anyway, this is the link :
 
 👉 [data_clean_featured.csv (Google Drive)](https://drive.google.com/file/d/1T9gq-MBUJyZHIW8uMIRPzfCxNslLov3j/view?usp=sharing)  
 
-
-**Option B — Regenerate it**  
-Run `01_Cleaning_and_Features.ipynb` — it downloads the raw files automatically from this repository and produces the processed file.
-
 ---
 
 ## Key results
