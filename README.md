@@ -70,7 +70,7 @@ ML-Project-GroupA/
 
 **Supervised learning** (regression task — predicting PM2.5)
 - Ridge regression (linear baseline)
-- Gradient Boosting (XGBoost)
+- Histogram-based Gradient Boosting
 - Data split: chronological (train 2013–2016, test 2017) — no shuffling
 - Tuning: `TimeSeriesSplit` cross-validation
 - Metrics: RMSE, MAE, R²
